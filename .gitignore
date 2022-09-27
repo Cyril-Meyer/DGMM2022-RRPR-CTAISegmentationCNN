@@ -127,3 +127,12 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# PyCharm
+.idea
+
+# Data and ComponentTreeAttributeImage
+DGMM2022-MEYER-DATA
+ComponentTreeAttributeImage
+02_preprocess_ComponentTreeAttributeImage
+
