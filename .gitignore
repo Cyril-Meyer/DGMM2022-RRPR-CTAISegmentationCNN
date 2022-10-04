@@ -140,3 +140,5 @@ ComponentTreeAttributeImage
 create_sbatch.ipynb
 sbatch/
 
+# old files
+__old__/
