@@ -138,4 +138,5 @@ ComponentTreeAttributeImage
 
 # credentials protected
 create_sbatch.ipynb
+sbatch/
 
