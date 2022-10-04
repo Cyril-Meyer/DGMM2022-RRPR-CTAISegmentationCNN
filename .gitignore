@@ -136,3 +136,6 @@ DGMM2022-MEYER-DATA
 ComponentTreeAttributeImage
 02_preprocess_ComponentTreeAttributeImage
 
+# credentials protected
+create_sbatch.ipynb
+
