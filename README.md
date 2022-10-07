@@ -33,6 +33,9 @@ python -m venv venv
 source venv/bin/activate
 pip install -U pip setuptools wheel
 pip install numpy scipy scikit-image
+pip install MedPy
+pip install tensorflow==2.6.2
+pip install git+https://github.com/Cyril-Meyer/tism.git
 ```
 
 If you are using the same version of Python, you should have the same
@@ -72,3 +75,52 @@ python 03_crop_roi.py
 ```
 
 ### Segmentation using Convolutional Neural Network
+
+Short version : to launch a train and evaluation for each of the experimentation once :
+```
+# X is the identifier for the experimentation run
+./run.sh X
+```
+
+1. Train the model
+
+The positional parameters are :
+1. unique ID for the train, e.g. a single char, `A`
+2. input data folder, e.g. `./DGMM2022-MEYER-DATA`
+3. output folder, e.g. `./CTAI_SEG_CNN`
+4. the dataset to use, `I3`, `I3_MI` or `I3_ER`
+5. the experimentation to run, e.g. `BASELINE`
+
+Examples :
+```
+python train.py A ./DGMM2022-MEYER-DATA ./CTAI_SEG_CNN I3 BASELINE
+```
+```
+python train.py A ./DGMM2022-MEYER-DATA ./CTAI_SEG_CNN I3_MI CONTRAST-MAX_AREA_D_AREAN_H_D-LIMIT_AREA
+```
+
+2. Evaluate the model
+
+The positional parameters are :
+1. unique ID of the train
+2. input data folder
+3. output folder
+4. the dataset to use
+5. the experimentation to run
+6. the model to choose, `BEST` or `LAST`  
+   the best model is selected using validation set at the end of each epochs.
+
+Examples :
+```
+python eval.py A ./DGMM2022-MEYER-DATA ./CTAI_SEG_CNN I3 BASELINE BEST
+python eval.py A ./DGMM2022-MEYER-DATA ./CTAI_SEG_CNN I3 BASELINE LAST
+```
+```
+python eval.py A ./DGMM2022-MEYER-DATA ./CTAI_SEG_CNN I3_MI CONTRAST-MAX_AREA_D_AREAN_H_D-LIMIT_AREA BEST
+python eval.py A ./DGMM2022-MEYER-DATA ./CTAI_SEG_CNN I3_MI CONTRAST-MAX_AREA_D_AREAN_H_D-LIMIT_AREA LAST
+```
+
+3. Merge & Analyze the results
+
+Use the `analysis.ipynb` jupyter notebook to merge the `.csv` metrics and then
+to visualize results.
