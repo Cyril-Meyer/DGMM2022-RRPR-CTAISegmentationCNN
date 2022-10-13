@@ -1,5 +1,5 @@
 # CTAISegmentationCNN
-Component Tree Attribute as Image for Segmentation using Convolutional Neural Network
+Combining max-tree and CNN for segmentation of cellular FIB-SEM images.
 
 ## Reproducible Research
 
@@ -10,16 +10,16 @@ Component Tree Attribute as Image for Segmentation using Convolutional Neural Ne
 ### Get code and data
 Get this repository :
 ```
-git clone git@github.com:Cyril-Meyer/CTAISegmentationCNN.git
+git clone https://github.com/Cyril-Meyer/DGMM2022-CTAISegmentationCNN.git CTAISegmentationCNN
 cd CTAISegmentationCNN
 ```
 Get the data :
 ```
-git clone git@github.com:Cyril-Meyer/DGMM2022-MEYER-DATA.git
+git clone https://github.com/Cyril-Meyer/DGMM2022-MEYER-DATA.git
 ```
 Get the source code of ComponentTreeAttributeImage :
 ```
-git clone git@github.com:Cyril-Meyer/ComponentTreeAttributeImage.git
+git clone https://github.com/Cyril-Meyer/DGMM2022-ComponentTreeAttributeImage.git ComponentTreeAttributeImage
 ```
 Optional : if you preferred to download the data in another folder,
 create a symbolic link :
@@ -39,13 +39,16 @@ pip install git+https://github.com/Cyril-Meyer/tism.git
 ```
 
 If you are using the same version of Python, you should have the same
-packages installed as in requirements.txt
+packages installed as in `requirements.txt`. This file is not made to be used to
+install the requirements, only to check them (result of `pip freeze`).
 If you have problems, check that you have the same libraries installed
-as in the requirements.txt file  
+as in the `requirements.txt` file.  
 *Note: if you cannot get TensorFlow 2, check that you correctly updated pip.*
 
 ### Pre process the data
-*Note: all the preprocessing scripts use fixed path and no arguments.*
+*Note: all the preprocessing scripts use fixed path and no arguments.
+If you want to use theses processing on your own images, edit the files to change
+the used paths*
 
 1. Low pass filter (9x9 mean filter) on the image slices
 
