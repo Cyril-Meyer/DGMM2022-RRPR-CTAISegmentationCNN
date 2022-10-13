@@ -135,6 +135,7 @@ dmypy.json
 DGMM2022-MEYER-DATA
 ComponentTreeAttributeImage
 02_preprocess_ComponentTreeAttributeImage
+MEYER_CTAI_SEG_CNN/MERGE*
 
 # credentials protected
 create_sbatch.ipynb
