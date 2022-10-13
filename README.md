@@ -10,16 +10,16 @@ Combining max-tree and CNN for segmentation of cellular FIB-SEM images.
 ### Get code and data
 Get this repository :
 ```
-git clone https://github.com/Cyril-Meyer/DGMM2022-CTAISegmentationCNN.git CTAISegmentationCNN
+git clone https://github.com/Cyril-Meyer/DGMM2022-RRPR-CTAISegmentationCNN.git CTAISegmentationCNN
 cd CTAISegmentationCNN
 ```
 Get the data :
 ```
-git clone https://github.com/Cyril-Meyer/DGMM2022-MEYER-DATA.git
+git clone https://github.com/Cyril-Meyer/DGMM2022-RRPR-MEYER-DATA.git DGMM2022-MEYER-DATA
 ```
 Get the source code of ComponentTreeAttributeImage :
 ```
-git clone https://github.com/Cyril-Meyer/DGMM2022-ComponentTreeAttributeImage.git ComponentTreeAttributeImage
+git clone https://github.com/Cyril-Meyer/DGMM2022-RRPR-ComponentTreeAttributeImage.git ComponentTreeAttributeImage
 ```
 Optional : if you preferred to download the data in another folder,
 create a symbolic link :
