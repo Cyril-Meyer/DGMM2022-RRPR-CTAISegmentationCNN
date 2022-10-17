@@ -127,3 +127,15 @@ python eval.py A ./DGMM2022-MEYER-DATA ./CTAI_SEG_CNN I3_MI CONTRAST-MAX_AREA_D_
 
 Use the `analysis.ipynb` jupyter notebook to merge the `.csv` metrics and then
 to visualize results.
+
+
+## Acknowledgements
+
+We acknowledge the High Performance Computing Center of the University of Strasbourg for supporting this work by
+providing scientific support and access to computing resources. Part of the computing resources were funded by the
+Equipex Equip@Meso project (Programme Investissements d'Avenir) and the CPER Alsacalcul/Big Data.  
+We thank D. Spehner from the Institut de Génétique et de Biologie Moléculaire et Cellulaire for providing the images
+and V. Mallouh for providing the annotations.  
+We acknowledge the use of resources of the French Infrastructure for Integrated Structural Biology FRISBI
+ANR-10-INBS-05 and of Instruct-ERIC.  
+We acknowledge that this work is supported by an IdEx doctoral contract, Université de Strasbourg.
